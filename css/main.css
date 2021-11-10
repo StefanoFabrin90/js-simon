@@ -11,5 +11,7 @@
 
 .row .crono {
     font-size: 20vh;
+    color: red;
+    border: 1px solid black;
 }
 

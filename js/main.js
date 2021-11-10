@@ -4,30 +4,19 @@
 
 
 
-// step 1: creo una funzione che mi crei numeri casuali
-
-function genRandonNumber (min, max){
-    let num = '';
-    for (let i = 0; i < 8; i++){
-        num += Math.floor(Math.random() * (max - min + 1) ) + min;
-    }
-    return num;
-}
-
-
 // step 2: Ref
 let display = document.querySelector('.display');
-console.log(display);
 
 
 
 // step 3: faccio la referenza dei pulsanti per poi attivare o resettare il timer
 
 const btbPlay = document.querySelector('.start');
+console.log(btbPlay);
 const btbReset = document.querySelector('.reset');
 
 let crono = document.querySelector('.crono');
-let time = 5
+let time = 20
 let timer;
 
 
@@ -36,13 +25,10 @@ btbPlay.addEventListener('click', () => {
     display.innerHTML = genRandonNumber (1 , 9)
     timer = setInterval( () => {  
         if (time === 0){
-            
             clearInterval(timer);
             crono.innerText = 0;
             display.innerText = 'Stop game';
-
-        } 
-        else {
+        }else {
             crono.innerText = time;
             time--;
         }
@@ -52,9 +38,23 @@ btbPlay.addEventListener('click', () => {
 
 // Reset
 btbReset.addEventListener ('click', () => {
-    time = 5;
+    time = 20;
     clearInterval(timer);
     crono.innerText = 'Ready?';
     display.innerText = 'NewGame';
-
 });
+
+
+
+
+
+
+// step 1: creo una funzione che mi crei numeri casuali
+
+function genRandonNumber (min, max){
+    let num = '';
+    for (let i = 0; i < 8; i++){
+        num += Math.floor(Math.random() * (max - min + 1) ) + min;
+    }
+    return num;
+}
