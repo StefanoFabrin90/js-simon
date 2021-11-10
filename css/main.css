@@ -1,3 +1,15 @@
-h1 {
-    color: red;
+.container .row {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 50px;
 }
+
+.row .display {
+    font-size: 30vh;
+}
+
+.row .crono {
+    font-size: 20vh;
+}
+
