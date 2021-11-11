@@ -6,11 +6,15 @@
 }
 
 .row .display {
-    font-size: 30vh;
+    font-size: 15vh;
+}
+
+.row .display2 {
+    font-size: 5vh;
 }
 
 .row .crono {
-    font-size: 20vh;
+    font-size: 5vh;
     color: red;
     border: 1px solid black;
 }
